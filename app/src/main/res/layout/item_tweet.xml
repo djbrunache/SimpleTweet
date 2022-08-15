@@ -14,7 +14,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/ivProfileImage"
-        tools:text="This Is How Great I Am" />
+        tools:text="This Is How Great I Am"
+        android:autoLink="all" />
 
     <ImageView
         android:id="@+id/ivProfileImage"
