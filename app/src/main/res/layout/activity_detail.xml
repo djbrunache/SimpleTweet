@@ -8,6 +8,13 @@
     android:layout_margin="5dp"
     tools:context=".DetailActivity">
 
+<!--    <include-->
+<!--        layout="@layout/toolbar_main"-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@android:color/white" />-->
+
     <ImageView
         android:id="@+id/image"
         android:layout_width="50dp"
@@ -46,4 +53,140 @@
         android:layout_marginTop="5dp"
         android:text="Description"
         android:autoLink="all" />
+
+    <ImageView
+        android:id="@+id/media"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/description"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="356dp"
+        android:layout_height="38dp"
+        android:layout_below="@id/media"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/date"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/ic_Favorite"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:layout_below="@id/date"
+        android:layout_alignBottom="@+id/ic_retweet"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="12dp"
+        android:layout_toEndOf="@+id/ic_retweet"
+        android:drawablePadding="8dp"
+        android:text="Favorite" />
+
+    <TextView
+        android:id="@+id/ic_retweet"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:layout_below="@id/date"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="8dp"
+        android:textSize="15dp"
+        tools:text="Retweet" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ic_retweet"
+        android:layout_marginTop="-10dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/ic_comment"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/ic_retweet"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="2dp"
+        android:drawablePadding="8dp"
+        app:drawableLeftCompat="@drawable/ic_comment" />
+
+    <TextView
+        android:id="@+id/reply"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/ic_retweet"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@id/ic_comment"
+        android:drawablePadding="8dp"
+        app:drawableLeftCompat="@drawable/ic_reply" />
+
+
+    <TextView
+        android:id="@+id/ic_heart"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/ic_retweet"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@id/reply"
+        android:drawablePadding="8dp"
+        app:drawableLeftCompat="@drawable/ic_heart" />
+
+    <TextView
+        android:id="@+id/ic_share"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/ic_retweet"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@id/ic_heart"
+        android:drawablePadding="8dp"
+        app:drawableLeftCompat="@drawable/ic_share" />
+
+
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="-10dp"
+        android:layout_below="@id/ic_comment"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/heart_color"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/ic_retweet"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-4dp"
+        android:layout_toEndOf="@id/reply"
+        android:drawablePadding="8dp"
+        app:drawableLeftCompat="@drawable/heart_change" />
+
+    <TextView
+        android:id="@+id/ic_rep_change"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/ic_retweet"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@id/ic_comment"
+        android:drawablePadding="8dp"
+        app:drawableLeftCompat="@drawable/ic_reply_change" />
+
 </RelativeLayout>
