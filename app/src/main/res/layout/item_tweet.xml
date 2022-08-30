@@ -36,14 +36,15 @@
         android:layout_toEndOf="@+id/ivProfileImage"
         tools:text="darilthegreat" />
 
+
     <TextView
         android:id="@+id/date"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="35dp"
-        android:layout_toEndOf="@+id/ivProfileImage" />
-
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/tvScreenName" />
 
     <ImageView
         android:id="@+id/media"

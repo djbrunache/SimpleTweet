@@ -1,5 +1,11 @@
 package com.codepath.apps.restclienttemplate.models;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -9,20 +15,52 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Parcel
+@Entity(foreignKeys = @ForeignKey(entity = User.class, parentColumns = "id", childColumns = "userId"))
 public class Tweet {
+    @ColumnInfo
     public String body;
+
+    @ColumnInfo
     public String createdAt;
+
+    @ColumnInfo
+    @PrimaryKey
     public long id;
+
+    @Ignore
     public User user;
+
+    @Ignore
     public User retweet;
+
+    @ColumnInfo
     public int retweets;
+
+    @ColumnInfo
     public int favorite;
+
+    @ColumnInfo
     public String replyUser;
+
+    @Ignore
     public Media medias;
+
+    @Ignore
     public Url url;
+
+    @ColumnInfo
+    public long userId;
+
+    @ColumnInfo
     public int favorite_count;
+
+    @ColumnInfo
     public int retweet_count;
+
+    @ColumnInfo
     public boolean isFavorited;
+
+    @ColumnInfo
     public boolean isRetweet;
 
     public Tweet() {}
@@ -32,7 +70,9 @@ public class Tweet {
         tweet.body = jsonObject.getString("text");
         tweet.createdAt = jsonObject.getString("created_at");
         tweet.id = jsonObject.getLong("id");
-        tweet.user = User.fromJson(jsonObject.getJSONObject("user"));
+        User user = User.fromJson(jsonObject.getJSONObject("user"));
+        tweet.user = user;
+        tweet.userId = user.id;
         tweet.medias = Media.fromJson(jsonObject.getJSONObject("entities")) ;
         tweet.retweet_count= jsonObject.getInt("retweet_count");
         tweet.retweets = jsonObject.getInt("retweet_count");

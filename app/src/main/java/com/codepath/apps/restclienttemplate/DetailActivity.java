@@ -55,12 +55,13 @@ public class DetailActivity extends AppCompatActivity {
 
         Tweet tweet = Parcels.unwrap(getIntent().getParcelableExtra("tweets"));
 
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setTitle("");
-//        // Sets the Toolbar to act as the ActionBar for this Activity window.
-//        getSupportActionBar().setLogo(R.drawable.logo_twitter);
-//        getSupportActionBar().setHomeAsUpIndicator(R.drawable.back_btn);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
+        setSupportActionBar(toolbar);
+        // Sets the Toolbar to act as the ActionBar for this Activity window.
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.back_btn);
+        getSupportActionBar().setIcon(R.drawable.logo_twitter);
+        getSupportActionBar().setTitle("");
         // Make sure the toolbar exists in the activity and is not null
 
         name.setText(tweet.getUser().getName());
